@@ -1,0 +1,13 @@
+.venv/
+.env
+secrets.h
+CODING BLYNK YOLO.txt
+*.ino.bak
+__pycache__/
+.pio/
+datasets/
+runs/
+*.pt
+*.log
+.pytest_cache/
+feeding system.v7i.yolov8.zip

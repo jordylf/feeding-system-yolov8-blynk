@@ -1,0 +1,7 @@
+Blynk
+RTClib
+ESP32Servo
+LiquidCrystal I2C
+OneWire
+DallasTemperature
+HX711

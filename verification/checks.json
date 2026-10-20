@@ -1,0 +1,49 @@
+{
+  "firmware": {
+    "board": "esp32dev",
+    "status": "PASS",
+    "ram_bytes": 46508,
+    "flash_bytes": 806617,
+    "build_log": "build.log"
+  },
+  "unit_tests": {
+    "status": "PASS",
+    "count": 16,
+    "command": ".venv/Scripts/python.exe -m unittest discover -s tests -v"
+  },
+  "dataset": {
+    "train_images": 351,
+    "valid_images": 34,
+    "test_images": 15,
+    "polygons_converted_to_boxes": 3
+  },
+  "blynk": {
+    "status": "BLOCKED_BY_INVALID_TOKEN",
+    "checked_regions": [
+      "global",
+      "sgp1",
+      "blr1",
+      "fra1",
+      "lon1",
+      "ny3"
+    ],
+    "http_status": 400,
+    "actuator_commands_sent": false
+  },
+  "live_webcam_tested": false,
+  "physical_hardware_tested": false,
+  "wokwi_simulation_tested": false,
+  "training": {
+    "status": "PASS",
+    "epochs": 30,
+    "model": "runs/detect/gesture-model/weights/best.pt",
+    "report": "verification/training-report.json"
+  },
+  "final_inference": {
+    "status": "PASS",
+    "classes": [
+      "finger up",
+      "palm open"
+    ]
+  }
+}

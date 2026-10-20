@@ -1,0 +1,255 @@
+{
+  "version": 1,
+  "author": "Odyworks",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-lcd2004",
+      "id": "lcd",
+      "top": -140,
+      "left": 220,
+      "attrs": {
+        "pins": "i2c"
+      }
+    },
+    {
+      "type": "wokwi-ds1307",
+      "id": "rtc",
+      "top": 160,
+      "left": 270,
+      "attrs": {
+        "initTime": "2026-10-21T17:13:30"
+      }
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "servo",
+      "top": -130,
+      "left": -180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-ds18b20",
+      "id": "temp",
+      "top": 170,
+      "left": -170,
+      "attrs": {
+        "temperature": "27"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "pullup",
+      "top": 130,
+      "left": -100,
+      "attrs": {
+        "value": "4700"
+      }
+    },
+    {
+      "type": "wokwi-hx711",
+      "id": "load",
+      "top": 300,
+      "left": 60,
+      "attrs": {
+        "type": "5kg"
+      }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "ph",
+      "top": -100,
+      "left": 430,
+      "attrs": {
+        "value": "500"
+      }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "ntu",
+      "top": 80,
+      "left": 450,
+      "attrs": {
+        "value": "100"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "lcd:SDA",
+      "esp:21",
+      "green",
+      []
+    ],
+    [
+      "lcd:SCL",
+      "esp:22",
+      "green",
+      []
+    ],
+    [
+      "rtc:SDA",
+      "esp:21",
+      "green",
+      []
+    ],
+    [
+      "rtc:SCL",
+      "esp:22",
+      "green",
+      []
+    ],
+    [
+      "servo:PWM",
+      "esp:18",
+      "green",
+      []
+    ],
+    [
+      "temp:DQ",
+      "esp:14",
+      "green",
+      []
+    ],
+    [
+      "load:DT",
+      "esp:26",
+      "green",
+      []
+    ],
+    [
+      "load:SCK",
+      "esp:25",
+      "green",
+      []
+    ],
+    [
+      "ph:SIG",
+      "esp:34",
+      "green",
+      []
+    ],
+    [
+      "ntu:SIG",
+      "esp:33",
+      "green",
+      []
+    ],
+    [
+      "pullup:1",
+      "esp:3V3",
+      "green",
+      []
+    ],
+    [
+      "pullup:2",
+      "temp:DQ",
+      "green",
+      []
+    ],
+    [
+      "lcd:VCC",
+      "esp:VIN",
+      "red",
+      []
+    ],
+    [
+      "rtc:5V",
+      "esp:VIN",
+      "red",
+      []
+    ],
+    [
+      "servo:V+",
+      "esp:VIN",
+      "red",
+      []
+    ],
+    [
+      "load:VCC",
+      "esp:VIN",
+      "red",
+      []
+    ],
+    [
+      "temp:VCC",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "ph:VCC",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "ntu:VCC",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "lcd:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "rtc:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "servo:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "temp:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "load:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "ph:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "ntu:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "esp:TX0",
+      "$serialMonitor:RX",
+      "",
+      []
+    ],
+    [
+      "esp:RX0",
+      "$serialMonitor:TX",
+      "",
+      []
+    ]
+  ],
+  "dependencies": {}
+}
