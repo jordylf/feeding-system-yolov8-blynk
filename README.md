@@ -3,7 +3,7 @@
 Webcam laptop → model YOLOv8 custom → Blynk Cloud → ESP32/Wokwi → servo.
 YOLO berjalan di laptop, bukan di ESP32. Aplikasi Blynk dapat mengontrol perangkat yang sama.
 
-## Status hasil implementasi (21 Oktober 2026)
+## Status hasil implementasi (01 Oktober 2025)
 
 Model **sudah dilatih** menggunakan dataset ini: YOLOv8n, 30 epoch, ukuran 320px, CPU.
 Bobot siap pakai: `runs/detect/gesture-model/weights/best.pt` (sekitar 6,5 MB).
